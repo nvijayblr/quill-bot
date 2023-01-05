@@ -1,0 +1,94 @@
+.search-movie {
+  margin-bottom: 40px;
+  .search-movie-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-content: center;
+  }
+  .search-input {
+    background: #1a2536;
+    border-radius: 8px;
+    .MuiInputBase-input {
+      color: #d4d7dd;
+      padding-left: 54px;
+      font-size: 21px;
+    }
+    .MuiInputAdornment-positionStart,
+    .MuiInputAdornment-positionEnd,
+    .MuiIconButton-root {
+      color: #d4d7dd;
+    }
+    .MuiOutlinedInput-notchedOutline {
+      border-width: 0 !important;
+    }
+  }
+  .search-input-warapper {
+    position: relative;
+    transition: 0.5s ease-out;
+    display: flex;
+    flex: 0 0 567px;
+    .search-icon {
+      color: #d4d7dd;
+      position: absolute;
+      left: 8px;
+      z-index: 100;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+    }
+    &.show {
+      .search-input {
+        animation: show-search-box-animate 0.25s ease-out alternate;
+      }
+    }
+    &.hide {
+      .search-input {
+        opacity: 0;
+        animation: hide-search-box-animate 0.25s ease-out alternate;
+      }
+    }
+  }
+  .settings {
+    display: flex;
+    height: 46px;
+    margin-top: 10px;
+    .MuiButtonBase-root {
+      color: #d4d7dd;
+    }
+  }
+}
+
+@keyframes show-search-box-animate {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  30% {
+    opacity: 100;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes hide-search-box-animate {
+  0% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .search-movie {
+    .search-input-warapper {
+      flex: 0 0 auto;
+    }
+    .settings {
+      display: none;
+    }
+  }
+}

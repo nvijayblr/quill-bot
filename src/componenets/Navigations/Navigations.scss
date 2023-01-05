@@ -1,0 +1,113 @@
+.app-navigation,
+.app-nav-wrapper {
+  flex: 0 0 275px;
+  height: 100vh;
+  background: #1f2a3c;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 275px;
+  .user-profile {
+    height: 191px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .profile-img {
+      background: url(../../images/profile.png) center center transparent;
+      width: 91px;
+      height: 91px;
+      border-radius: 50%;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .user-name {
+      margin: 11px 0 0;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+  }
+
+  .MuiDivider-root {
+    border-color: #394b61;
+  }
+
+  .menu-wrapper {
+    .MuiList-root {
+      .MuiMenuItem-root {
+        margin: 0;
+        padding: 0;
+        line-height: 45px;
+        height: 45px;
+        &::after {
+          width: 3px;
+          height: 45px;
+          display: inline-block;
+          content: " ";
+          background-color: #00e0ff;
+          transition: 0.25s ease;
+          opacity: 0;
+        }
+
+        &:hover,
+        &.active {
+          color: #00e0ff;
+          transition: 0.5s ease;
+          &::after {
+            opacity: 1;
+            transition: 0.5s ease;
+          }
+
+          .MuiListItemIcon-root {
+            color: #00e0ff;
+          }
+        }
+        .MuiListItemIcon-root {
+          margin-left: 52px;
+          color: #d4d7dd;
+        }
+        .MuiListItemText-primary {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+.hamburger-icon {
+  height: 44px;
+  color: #d4d7dd !important;
+  position: absolute !important;
+  top: 10px;
+  left: 20px;
+}
+.hamburger-icon-close {
+  color: #d4d7dd !important;
+}
+.mobile-drawer {
+  display: none;
+  .MuiPaper-root {
+    background-color: #1f2a3c !important;
+    color: inherit;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .movies-list {
+    margin-left: 0 !important;
+  }
+  .app-nav-wrapper {
+    width: 0;
+  }
+  .app-navigation {
+    display: none !important;
+  }
+  .mobile-drawer {
+    display: block;
+  }
+  .movie-preview-wrapper .movie-preview .MuiImageListItem-root {
+    flex: 0 0 170px !important;
+  }
+}

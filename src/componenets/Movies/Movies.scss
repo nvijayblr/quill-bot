@@ -1,0 +1,33 @@
+.movies-list {
+  padding: 48px;
+  background-color: #273244;
+  margin-left: 275px;
+  width: 100%;
+  .MuiPaper-elevation {
+    box-shadow: none;
+    border-radius: 11px;
+    height: 278px;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+  }
+  .MuiImageListItem-root {
+    height: 188px !important;
+    img {
+      border-radius: 6px;
+    }
+  }
+  .movie-title {
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #d4d7dd;
+  }
+  .btns-wrapper {
+    margin-top: 12px;
+    color: #d4d7dd;
+  }
+  .play-circle {
+    margin-right: 16px;
+  }
+}
